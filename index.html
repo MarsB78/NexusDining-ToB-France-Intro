@@ -229,7 +229,7 @@
                                     <span class="text-2xl mr-3">🚢</span>
                                     <div>
                                         <strong class="text-lg">包厂直采</strong>
-                                        <p class="text-nexus-silver mt-1">越过所有欧洲本地中间商，直接对接中国与东南亚源头优质大厂。</p>
+                                        <p class="text-nexus-silver mt-1">越过所有欧洲本地中间商，直接对接全球源头优质大厂。</p>
                                     </div>
                                 </li>
                             </ul>
@@ -526,17 +526,6 @@
                         </p>
 
                         
-                        <div class="mb-10 max-w-xl mx-auto">
-                            <div class="flex justify-between text-nexus-gold text-sm font-bold mb-2 font-display">
-                                <span>已锁定席位</span>
-                                <span id="spots-left">剩余 216 席</span>
-                            </div>
-                            <div class="w-full bg-gray-800 rounded-full h-4 shadow-inner overflow-hidden border border-gray-700">
-                                <div class="bg-gradient-to-r from-nexus-gold to-yellow-400 h-4 rounded-full progress-bar-fill" style="width: 0%" id="cta-progress"></div>
-                            </div>
-                        </div>
-
-                        
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
                             <div class="bg-white/10 rounded-xl p-4 text-center border border-white/5 backdrop-blur">
                                 <div class="text-3xl mb-2">👑</div>
@@ -701,12 +690,6 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        
-                        if(entry.target.querySelector('#cta-progress')) {
-                            setTimeout(() => {
-                                document.getElementById('cta-progress').style.width = '78.4%';
-                            }, 500);
-                        }
                         observer.unobserve(entry.target);
                     }
                 });
