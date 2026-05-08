@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Dining：法国亚裔餐饮“破局与共赢”计划</title>
+    <title>Nexus Dining</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -11,14 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        nexus: {
-                            navy: '#0A2540',
-                            gold: '#F2994A',
-                            silver: '#E2E8F0',
-                            red: '#D93025',
-                            green: '#0F9D58',
-                            dark: '#051424'
-                        }
+                        nexus: { navy: '#0A2540', gold: '#F2994A', silver: '#E2E8F0', red: '#D93025', green: '#0F9D58', dark: '#051424' }
                     },
                     fontFamily: {
                         sans: ['"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
@@ -29,77 +22,22 @@
         }
     </script>
     <style>
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
-        }
-        body {
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        .nexus-pad-container {
-            aspect-ratio: 4/3;
-            max-height: 600px;
-        }
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            will-change: opacity, visibility;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: none;
-        }
-        .flow-line {
-            background: linear-gradient(90deg, #E2E8F0 50%, transparent 50%);
-            background-size: 20px 2px;
-        }
-        .flow-line-active {
-            background: linear-gradient(90deg, #F2994A 50%, transparent 50%);
-            background-size: 24px 8px; /* 加粗了动态虚线 */
-            animation: move-line 1s linear infinite;
-        }
-        @keyframes move-line {
-            0% { background-position: 0 0; }
-            100% { background-position: 24px 0; }
-        }
-        .progress-bar-fill {
-            transition: width 1.5s ease-in-out;
-        }
-        /* 新增：直达按钮专属动态发光效果 */
-        @keyframes dynamic-glow {
-            0%, 100% { box-shadow: 0 0 15px rgba(242,153,74,0.4); transform: translate(-50%, -50%) scale(1); }
-            50% { box-shadow: 0 0 25px rgba(242,153,74,0.8); transform: translate(-50%, -50%) scale(1.02); }
-        }
-        .animate-dynamic-glow {
-            animation: dynamic-glow 2s infinite ease-in-out;
-        }
-        @keyframes flash-bolt {
-            0%, 100% { opacity: 1; filter: brightness(1); }
-            50% { opacity: 0.5; filter: brightness(1.5); }
-        }
-        .animate-bolt {
-            animation: flash-bolt 1.5s infinite ease-in-out;
-        }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 350px; max-height: 400px; }
+        @media (min-width: 768px) { .chart-container { height: 400px; } }
+        body { background-color: #f8fafc; color: #1e293b; }
+        .nexus-pad-container { aspect-ratio: 4/3; max-height: 600px; }
+        .fade-in-section { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; will-change: opacity, visibility; }
+        .fade-in-section.is-visible { opacity: 1; transform: none; }
+        .flow-line { background: linear-gradient(90deg, #E2E8F0 50%, transparent 50%); background-size: 20px 2px; }
+        .flow-line-active { background: linear-gradient(90deg, #F2994A 50%, transparent 50%); background-size: 24px 8px; animation: move-line 1s linear infinite; }
+        @keyframes move-line { 0% { background-position: 0 0; } 100% { background-position: 24px 0; } }
+        @keyframes dynamic-glow { 0%, 100% { box-shadow: 0 0 15px rgba(242,153,74,0.4); transform: translate(-50%, -50%) scale(1); } 50% { box-shadow: 0 0 25px rgba(242,153,74,0.8); transform: translate(-50%, -50%) scale(1.02); } }
+        .animate-dynamic-glow { animation: dynamic-glow 2s infinite ease-in-out; }
+        @keyframes flash-bolt { 0%, 100% { opacity: 1; filter: brightness(1); } 50% { opacity: 0.5; filter: brightness(1.5); } }
+        .animate-bolt { animation: flash-bolt 1.5s infinite ease-in-out; }
     </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
-
-    <!-- Chosen Palette: Nexus Professional (Navy #0A2540, Gold #F2994A, Silver #E2E8F0, Red #D93025, Green #0F9D58) -->
-    <!-- Application Structure Plan: The SPA is structured as a persuasive, scrolling narrative designed for high-net-worth investors and restaurant owners. It uses a single-page layout transitioning from problem identification (Pain Points/Waterfall chart) to solution presentation (Nexus Model flowchart), followed by concrete benefits (Cards), technological empowerment (Interactive Tablet Mockup), risk mitigation (Pillars), and finally a strong Call to Action. This linear storytelling approach ensures the user digests the 'why', 'how', and 'what' in a logical sequence, maximizing conversion and comprehension without navigating away from the core message. -->
-    <!-- Visualization & Content Choices: 1. Profit Loss -> Goal: Inform/Compare -> Viz: Floating Bar Chart (simulating Waterfall) -> Interaction: Tooltips -> Justification: Clearly visualizes the 40% margin erosion. 2. Supply Chain -> Goal: Compare -> Viz: HTML Flexbox Process Flow -> Interaction: Hover highlights -> Justification: Stark contrast between complex traditional and simple Nexus routes. 3. Smart Kitchen -> Goal: Organize/Inform -> Viz: Interactive HTML/CSS Tablet UI -> Interaction: Tab switching -> Justification: Tangible demonstration of the software value-add. Confirmed: NO SVG/Mermaid used. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
     <nav class="fixed w-full z-50 bg-nexus-navy/95 backdrop-blur shadow-lg transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,12 +45,18 @@
                 <div class="flex items-center">
                     <span class="text-3xl font-bold text-white tracking-wider">NEXUS<span class="text-nexus-gold">DINING</span></span>
                 </div>
-                <div class="flex items-center hidden md:flex space-x-8">
-                    <a href="#pain-points" class="text-nexus-silver hover:text-white transition">痛点解析</a>
-                    <a href="#model" class="text-nexus-silver hover:text-white transition">直采模式</a>
-                    <a href="#benefits" class="text-nexus-silver hover:text-white transition">核心收益</a>
-                    <a href="#smart-kitchen" class="text-nexus-silver hover:text-white transition">智慧后厨</a>
-                    <a href="#cta" class="bg-nexus-gold text-nexus-navy font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition transform hover:scale-105">锁定名额</a>
+                <div class="flex items-center hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#pain-points" class="text-nexus-silver hover:text-white transition" data-i18n="nav_1">痛点解析</a>
+                    <a href="#model" class="text-nexus-silver hover:text-white transition" data-i18n="nav_2">直采模式</a>
+                    <a href="#benefits" class="text-nexus-silver hover:text-white transition" data-i18n="nav_3">核心收益</a>
+                    <a href="#smart-kitchen" class="text-nexus-silver hover:text-white transition" data-i18n="nav_4">智慧后厨</a>
+                    <a href="#cta" class="bg-nexus-gold text-nexus-navy font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition transform hover:scale-105" data-i18n="nav_btn">锁定名额</a>
+                    
+                    <div class="flex items-center space-x-1 pl-4 lg:pl-6 border-l border-white/20">
+                        <button id="btn-zh" onclick="setLang('zh')" class="lang-btn text-white font-bold text-sm bg-white/10 px-2.5 py-1 rounded-md cursor-default">中文</button>
+                        <button id="btn-en" onclick="setLang('en')" class="lang-btn text-nexus-silver hover:text-white text-sm px-2.5 py-1 transition cursor-pointer">EN</button>
+                        <button id="btn-fr" onclick="setLang('fr')" class="lang-btn text-nexus-silver hover:text-white text-sm px-2.5 py-1 transition cursor-pointer">FR</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,15 +69,15 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in-section">
             <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-white/20">
                 <span class="text-nexus-gold text-xl">🚀</span>
-                <span class="text-white font-medium tracking-wide">全法亚裔餐饮“破局与共赢”计划</span>
+                <span class="text-white font-medium tracking-wide" data-i18n="hero_tag">全法亚裔餐饮“破局与共赢”计划</span>
             </div>
             
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                告别中间商剥削 <br/>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-nexus-gold to-yellow-300">把利润抢回自己的收银台</span>
+                <span data-i18n="hero_title_1">告别中间商剥削</span> <br/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-nexus-gold to-yellow-300" data-i18n="hero_title_2">把利润抢回自己的收银台</span>
             </h1>
             
-            <p class="mt-4 text-xl md:text-2xl text-nexus-silver max-w-3xl mx-auto font-light">
+            <p class="mt-4 text-xl md:text-2xl text-nexus-silver max-w-3xl mx-auto font-light" data-i18n="hero_sub">
                 Nexus Dining：重构全法亚裔餐饮供应链。万店联合，源头直采。我们承诺：降本、增效、保现金流。
             </p>
             
@@ -141,22 +85,22 @@
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center space-x-4 backdrop-blur-md">
                     <div class="w-12 h-12 bg-nexus-navy rounded-full flex items-center justify-center text-2xl shadow-inner shadow-black/50">🎯</div>
                     <div class="text-left">
-                        <p class="text-sm text-nexus-silver">核心目标</p>
-                        <p class="text-lg font-bold text-white">重构全法供应链</p>
+                        <p class="text-sm text-nexus-silver" data-i18n="hero_k1_sub">核心目标</p>
+                        <p class="text-lg font-bold text-white" data-i18n="hero_k1">重构全法供应链</p>
                     </div>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center space-x-4 backdrop-blur-md">
                     <div class="w-12 h-12 bg-nexus-navy rounded-full flex items-center justify-center text-2xl shadow-inner shadow-black/50">⚙️</div>
                     <div class="text-left">
-                        <p class="text-sm text-nexus-silver">创新模式</p>
-                        <p class="text-lg font-bold text-white">万店联合源头直采</p>
+                        <p class="text-sm text-nexus-silver" data-i18n="hero_k2_sub">创新模式</p>
+                        <p class="text-lg font-bold text-white" data-i18n="hero_k2">万店联合源头直采</p>
                     </div>
                 </div>
                 <div class="bg-white/5 border border-white/10 rounded-2xl p-4 flex items-center space-x-4 backdrop-blur-md">
                     <div class="w-12 h-12 bg-nexus-navy rounded-full flex items-center justify-center text-2xl shadow-inner shadow-black/50">🤝</div>
                     <div class="text-left">
-                        <p class="text-sm text-nexus-silver">我们的承诺</p>
-                        <p class="text-lg font-bold text-white">降本·增效·保现金流</p>
+                        <p class="text-sm text-nexus-silver" data-i18n="hero_k3_sub">我们的承诺</p>
+                        <p class="text-lg font-bold text-white" data-i18n="hero_k3">降本·增效·保现金流</p>
                     </div>
                 </div>
             </div>
@@ -167,20 +111,24 @@
         <section id="pain-points" class="py-24 bg-white relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-4xl font-bold text-nexus-navy mb-4">🛑 您的利润，到底去哪了？</h2>
-                    <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-nexus-navy mb-4"><span data-i18n="pain_title">🛑 您的利润，到底去哪了？</span></h2>
+                    <p class="text-xl text-gray-500 max-w-3xl mx-auto" data-i18n="pain_sub">
                         本节为您揭示过去两年压在每一位在法餐饮老板头上的“三座大山”。通过量化数据模型，直观展示传统供应链中层层剥削的严峻现状。
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="bg-gray-50 p-6 rounded-3xl shadow-lg border border-gray-100 fade-in-section">
-                        <h3 class="text-xl font-bold text-center mb-6 text-nexus-navy">传统供应链利润流失瀑布图</h3>
+                        <h3 class="text-xl font-bold text-center mb-6 text-nexus-navy" data-i18n="pain_chart_title">传统供应链利润流失瀑布图</h3>
                         <div class="chart-container">
                             <canvas id="profitWaterfallChart"></canvas>
                         </div>
                         <div class="mt-6 text-center">
-                            <p class="text-lg font-medium text-gray-700">结论：超过 <span class="text-nexus-red font-bold text-2xl font-display">>40%</span> 的利润，被中间商白白吃掉！</p>
+                            <p class="text-lg font-medium text-gray-700">
+                                <span data-i18n="pain_conclusion_1">结论：超过</span> 
+                                <span class="text-nexus-red font-bold text-2xl font-display">>40%</span> 
+                                <span data-i18n="pain_conclusion_2">的利润，被中间商白白吃掉！</span>
+                            </p>
                         </div>
                     </div>
 
@@ -189,8 +137,8 @@
                             <div class="flex items-start">
                                 <div class="text-3xl mr-4 group-hover:scale-110 transition-transform">📉</div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-nexus-navy mb-2">通胀飙升的极限挤压</h4>
-                                    <p class="text-gray-600">房租、人工双双暴涨，但受制于市场消费力，菜单价格却面临无法突破的天花板，利润空间被极限压缩。</p>
+                                    <h4 class="text-xl font-bold text-nexus-navy mb-2" data-i18n="pain_1_title">通胀飙升的极限挤压</h4>
+                                    <p class="text-gray-600" data-i18n="pain_1_desc">房租、人工双双暴涨，但受制于市场消费力，菜单价格却面临无法突破的天花板，利润空间被极限压缩。</p>
                                 </div>
                             </div>
                         </div>
@@ -199,8 +147,11 @@
                             <div class="flex items-start">
                                 <div class="text-3xl mr-4 group-hover:scale-110 transition-transform">🦐</div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-nexus-navy mb-2">核心食材成本暴增</h4>
-                                    <p class="text-gray-600">黑虎虾、大米、食用油等后厨生命线食材，进货价格涨幅已全面突破 <span class="text-nexus-red font-bold font-display text-lg">30% - 40%</span>。</p>
+                                    <h4 class="text-xl font-bold text-nexus-navy mb-2" data-i18n="pain_2_title">核心食材成本暴增</h4>
+                                    <p class="text-gray-600">
+                                        <span data-i18n="pain_2_desc_1">黑虎虾、大米、食用油等后厨生命线食材，进货价格涨幅已全面突破</span> 
+                                        <span class="text-nexus-red font-bold font-display text-lg">30% - 40%</span>。
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -209,8 +160,8 @@
                             <div class="flex items-start">
                                 <div class="text-3xl mr-4 group-hover:scale-110 transition-transform">😤</div>
                                 <div>
-                                    <h4 class="text-xl font-bold text-nexus-navy mb-2">服务质量极其低下</h4>
-                                    <p class="text-gray-600">长期垄断导致服务傲慢。错单、漏单无人问津，坏货退换扯皮不断，餐饮老板既出高价还要受气。</p>
+                                    <h4 class="text-xl font-bold text-nexus-navy mb-2" data-i18n="pain_3_title">服务质量极其低下</h4>
+                                    <p class="text-gray-600" data-i18n="pain_3_desc">长期垄断导致服务傲慢。错单、漏单无人问津，坏货退换扯皮不断，餐饮老板既出高价还要受气。</p>
                                 </div>
                             </div>
                         </div>
@@ -224,143 +175,122 @@
             
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-4xl font-bold mb-4">🤝 我们不是批发商，我们是您的“采购合伙人”</h2>
-                    <p class="text-xl text-nexus-silver max-w-3xl mx-auto mb-8">
+                    <h2 class="text-4xl font-bold mb-4" data-i18n="model_title">🤝 我们不是批发商，我们是您的“采购合伙人”</h2>
+                    <p class="text-xl text-nexus-silver max-w-3xl mx-auto mb-8" data-i18n="model_sub">
                         本节阐述 Nexus Dining 独创的“联合集采”商业模式。我们将对比传统冗长的供应链结构，揭示去中心化、端到端直采如何创造结构性的成本优势。
                     </p>
                     
                     <div class="flex flex-col gap-12 bg-white/5 rounded-[2rem] p-8 lg:p-12 border border-white/10 backdrop-blur-sm shadow-2xl">
                         
-                        <!-- 1. 左侧文字调整至上方左侧，2. 内容放在中间偏右 -->
                         <div class="flex flex-col lg:flex-row items-start justify-between w-full">
                             <div class="w-full lg:w-1/3 mb-10 lg:mb-0">
-                                <h3 class="text-3xl lg:text-4xl font-bold text-nexus-gold leading-tight">我们不赚差价，<br/>只做两件事：</h3>
+                                <h3 class="text-3xl lg:text-4xl font-bold text-nexus-gold leading-tight" data-i18n="model_h3">我们不赚差价，<br/>只做两件事：</h3>
                             </div>
                             
                             <div class="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 lg:pl-8">
                                 <div class="flex items-start">
                                     <span class="text-3xl mr-4 drop-shadow-md">🧱</span>
                                     <div>
-                                        <strong class="text-xl text-white tracking-wide block mb-2">聚沙成塔</strong>
-                                        <p class="text-gray-400 text-sm leading-relaxed pr-4">汇聚全法顶尖餐厅的零散订单，形成面对上游工厂的绝对议价筹码。</p>
+                                        <strong class="text-xl text-white tracking-wide block mb-2" data-i18n="model_f1">聚沙成塔</strong>
+                                        <p class="text-gray-400 text-sm leading-relaxed pr-4" data-i18n="model_f1_desc">汇聚全法顶尖餐厅的零散订单，形成面对上游工厂的绝对议价筹码。</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <span class="text-3xl mr-4 drop-shadow-md">🚢</span>
                                     <div>
-                                        <strong class="text-xl text-white tracking-wide block mb-2">包厂直采</strong>
-                                        <p class="text-gray-400 text-sm leading-relaxed pr-4">越过所有欧洲本地中间商，直接对接全球源头优质大厂。</p>
+                                        <strong class="text-xl text-white tracking-wide block mb-2" data-i18n="model_f2">包厂直采</strong>
+                                        <p class="text-gray-400 text-sm leading-relaxed pr-4" data-i18n="model_f2_desc">越过所有欧洲本地中间商，直接对接全球源头优质大厂。</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
-                        <!-- 3. 右图放在文字下方，利用整个左右空间的宽度（切换为浅色明亮风格） -->
                         <div class="w-full bg-white rounded-[1.5rem] p-5 lg:p-8 border border-gray-200 shadow-2xl flex flex-col justify-center text-gray-800">
                             
                             <div class="mb-6 relative">
                                 <div class="text-gray-800 font-bold mb-6 flex items-center text-base lg:text-lg">
-                                    <span class="text-red-500 mr-2 text-xl">❌</span> 传统模式 (低效/高成本)
+                                    <span class="text-red-500 mr-2 text-xl">❌</span> <span data-i18n="model_trad_title">传统模式 (低效/高成本)</span>
                                 </div>
                                 
-                                <!-- 线性链路 (全宽从左到右) -->
                                 <div class="flex items-center justify-between w-full relative pt-2 pb-6 overflow-x-auto md:overflow-visible">
                                     
-                                    <!-- 节点 1 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🏭</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap">源头工厂</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap" data-i18n="node_1">源头工厂</span>
                                     </div>
-                                    
-                                    <!-- 连线 1 -->
                                     <div class="flex-1 border-t-2 border-dashed border-gray-300 mx-1 lg:mx-2 relative flex justify-center z-0 min-w-[20px]">
                                         <span class="absolute -top-3.5 text-[10px] lg:text-xs text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-red-200 shadow-sm">+15%</span>
                                     </div>
 
-                                    <!-- 节点 2 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🚢</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap">出口商</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap" data-i18n="node_2">出口商</span>
                                     </div>
-                                    
-                                    <!-- 连线 2 -->
                                     <div class="flex-1 border-t-2 border-dashed border-gray-300 mx-1 lg:mx-2 relative flex justify-center z-0 min-w-[20px]">
                                         <span class="absolute -top-3.5 text-[10px] lg:text-xs text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-red-200 shadow-sm">+10%</span>
                                     </div>
 
-                                    <!-- 节点 3 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🏗️</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap">进口商</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap" data-i18n="node_3">进口商</span>
                                     </div>
-                                    
-                                    <!-- 连线 3 -->
                                     <div class="flex-1 border-t-2 border-dashed border-gray-300 mx-1 lg:mx-2 relative flex justify-center z-0 min-w-[20px]">
                                         <span class="absolute -top-3.5 text-[10px] lg:text-xs text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-red-200 shadow-sm">+15%</span>
                                     </div>
 
-                                    <!-- 节点 4 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🚛</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap">大批发商</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap" data-i18n="node_4">大批发商</span>
                                     </div>
-                                    
-                                    <!-- 连线 4 -->
                                     <div class="flex-1 border-t-2 border-dashed border-gray-300 mx-1 lg:mx-2 relative flex justify-center z-0 min-w-[20px]">
                                         <span class="absolute -top-3.5 text-[10px] lg:text-xs text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-red-200 shadow-sm">+10%</span>
                                     </div>
 
-                                    <!-- 节点 5 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🚐</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap">小批发商</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-gray-600 font-medium tracking-wide whitespace-nowrap" data-i18n="node_5">小批发商</span>
                                     </div>
-                                    
-                                    <!-- 连线 5 -->
                                     <div class="flex-1 border-t-2 border-dashed border-gray-300 mx-1 lg:mx-2 relative flex justify-center z-0 min-w-[20px]">
                                         <span class="absolute -top-3.5 text-[10px] lg:text-xs text-red-600 font-bold bg-red-50 px-2 py-0.5 rounded-full whitespace-nowrap border border-red-200 shadow-sm">+15%</span>
                                     </div>
 
-                                    <!-- 节点 6 -->
                                     <div class="relative flex justify-center items-center flex-shrink-0">
                                         <div class="w-12 h-12 lg:w-14 lg:h-14 rounded-full flex items-center justify-center text-2xl lg:text-3xl drop-shadow-sm z-10 bg-gray-50 border border-gray-200 shadow-sm">🏪</div>
-                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-orange-600 font-bold tracking-wide whitespace-nowrap">您的餐厅</span>
+                                        <span class="absolute top-full mt-3 text-xs lg:text-sm text-orange-600 font-bold tracking-wide whitespace-nowrap" data-i18n="node_6">您的餐厅</span>
                                     </div>
                                     
                                 </div>
                             </div>
                             
-                            
                             <div class="relative mt-2 p-5 lg:p-6 border border-yellow-200 rounded-2xl bg-gradient-to-br from-orange-50/50 to-yellow-50/50 shadow-sm">
                                 <div class="text-nexus-navy font-bold mb-5 flex items-center text-sm lg:text-base">
-                                    <span class="bg-green-500 text-white rounded p-0.5 mr-2 text-xs shadow-sm">✅</span> Nexus 模式 (直达/底价)
+                                    <span class="bg-green-500 text-white rounded p-0.5 mr-2 text-xs shadow-sm">✅</span> <span data-i18n="model_nex_title">Nexus 模式 (直达/底价)</span>
                                 </div>
                                 
                                 <div class="flex items-center justify-between relative z-10 px-2 lg:px-6 pb-2">
                                     <div class="flex flex-col items-center transform hover:scale-110 transition cursor-pointer z-20">
                                         <div class="w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-4xl lg:text-5xl mb-2.5 drop-shadow-lg bg-white rounded-full border border-yellow-200 shadow-md">🏭</div>
-                                        <span class="text-xs lg:text-sm font-bold text-gray-800 tracking-wide">源头工厂</span>
+                                        <span class="text-xs lg:text-sm font-bold text-gray-800 tracking-wide" data-i18n="node_1_b">源头工厂</span>
                                     </div>
                                     
                                     <div class="flex-1 mx-4 lg:mx-6 relative">
                                         <div class="h-2 w-full bg-yellow-100 rounded-full overflow-hidden opacity-90">
                                             <div class="h-full w-full flow-line-active"></div>
                                         </div>
-                                        <!-- 动态发光的直达按钮 -->
                                         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-nexus-gold to-yellow-500 text-slate-900 px-6 py-2.5 rounded-full font-bold whitespace-nowrap flex items-center cursor-pointer animate-dynamic-glow z-20 shadow-lg">
                                             <span class="mr-2 text-yellow-100 animate-bolt text-sm lg:text-base">⚡</span> 
-                                            <span class="tracking-widest drop-shadow-sm text-sm lg:text-base">Nexus 物流直达</span> 
+                                            <span class="tracking-widest drop-shadow-sm text-sm lg:text-base" data-i18n="model_nex_btn">Nexus 物流直达</span> 
                                             <span class="ml-2 text-yellow-100 animate-bolt text-sm lg:text-base">⚡</span>
                                         </div>
                                     </div>
                                     
                                     <div class="flex flex-col items-center transform hover:scale-110 transition cursor-pointer z-20">
                                         <div class="w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-4xl lg:text-5xl mb-2.5 drop-shadow-lg bg-white rounded-full border border-yellow-200 shadow-md">👨‍🍳</div>
-                                        <span class="text-xs lg:text-sm font-bold text-orange-600 tracking-wide">您的后厨</span>
+                                        <span class="text-xs lg:text-sm font-bold text-orange-600 tracking-wide" data-i18n="node_6_b">您的后厨</span>
                                     </div>
                                 </div>
                                 
-                                <p class="text-center text-gray-500 text-xs lg:text-sm mt-5 pt-4 border-t border-yellow-200/60 leading-relaxed mx-auto max-w-2xl font-medium">
+                                <p class="text-center text-gray-500 text-xs lg:text-sm mt-5 pt-4 border-t border-yellow-200/60 leading-relaxed mx-auto max-w-2xl font-medium" data-i18n="model_nex_desc">
                                     没有进口商，没有地区经销商。货品从源头工厂，直接送达您的后厨。
                                 </p>
                             </div>
@@ -374,8 +304,8 @@
         <section id="benefits" class="py-24 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-4xl font-bold text-nexus-navy mb-4">💎 合作的三大绝对收益</h2>
-                    <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-nexus-navy mb-4"><span data-i18n="ben_title">💎 合作的三大绝对收益</span></h2>
+                    <p class="text-xl text-gray-500 max-w-3xl mx-auto" data-i18n="ben_sub">
                         本节为您量化展示加入 Nexus 生态后获得的真金白银特权。我们将从成本缩减、资金流转和风险规避三个核心经营维度进行详细解读。
                     </p>
                 </div>
@@ -383,16 +313,16 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
                     
                     <div class="bg-white rounded-[2rem] p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-section relative border border-gray-100 flex flex-col h-full overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-nexus-gold text-white px-5 py-2 rounded-bl-2xl rounded-tr-[2rem] font-bold text-sm shadow-sm z-10 tracking-widest">核心</div>
+                        <div class="absolute top-0 right-0 bg-nexus-gold text-white px-5 py-2 rounded-bl-2xl rounded-tr-[2rem] font-bold text-sm shadow-sm z-10 tracking-widest" data-i18n="ben_tag">核心</div>
                         <div class="absolute top-0 left-0 w-full h-1 bg-nexus-gold"></div>
                         
                         <div class="flex-grow">
                             <div class="flex items-center text-2xl font-bold text-gray-800 mb-3 mt-2">
-                                <span class="mr-3 text-3xl">💰</span> 砍掉差价
+                                <span class="mr-3 text-3xl">💰</span> <span data-i18n="ben_1_t1">砍掉差价</span>
                             </div>
-                            <div class="text-gray-500 text-sm mb-1">进货成本直降</div>
+                            <div class="text-gray-500 text-sm mb-1" data-i18n="ben_1_t2">进货成本直降</div>
                             <div class="text-nexus-red font-display text-4xl lg:text-5xl font-bold mb-4">15% - 20%</div>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                            <p class="text-gray-500 text-sm leading-relaxed mb-6" data-i18n="ben_1_desc">
                                 依托万店联合采购量，我们能拿到毫无水分的“出厂底价”。承诺核心大单品，您的拿货价将比市面主流批发商便宜极多。
                             </p>
                         </div>
@@ -401,9 +331,9 @@
                             <div>
                                 <div class="flex justify-between items-center mb-5">
                                     <div class="font-bold text-nexus-navy flex items-center text-sm">
-                                        <span class="mr-2 opacity-80 text-base">💡</span> 实时收益精算器
+                                        <span class="mr-2 opacity-80 text-base">💡</span> <span data-i18n="calc_title">实时收益精算器</span>
                                     </div>
-                                    <div class="bg-nexus-navy text-white text-xs px-3 py-1.5 rounded-lg font-bold">年采购额 (€)</div>
+                                    <div class="bg-nexus-navy text-white text-xs px-3 py-1.5 rounded-lg font-bold" data-i18n="calc_unit">年采购额 (€)</div>
                                 </div>
                                 
                                 <div class="relative w-full mb-5">
@@ -411,38 +341,37 @@
                                 </div>
                                 
                                 <div class="flex justify-between items-end text-gray-500 font-bold">
-                                    <div class="text-xs">10万€</div>
+                                    <div class="text-xs">100k€</div>
                                     <div class="text-center">
                                         <div id="calc-volume" class="text-xl font-display text-nexus-navy border-b-2 border-nexus-gold pb-0.5 px-2 inline-block">300 000 €</div>
                                     </div>
-                                    <div class="text-xs">100万€</div>
+                                    <div class="text-xs">1M€</div>
                                 </div>
                             </div>
                             
                             <div class="mt-auto pt-4">
                                 <div class="bg-green-50 border border-green-200 rounded-xl p-3 text-center mb-3">
-                                    <div class="text-xs font-bold text-gray-700 mb-1">一年可直接省下纯利润</div>
+                                    <div class="text-xs font-bold text-gray-700 mb-1" data-i18n="calc_res_t">一年可直接省下纯利润</div>
                                     <div class="text-nexus-green flex items-baseline justify-center">
                                         <span id="calc-result" class="text-3xl font-display font-bold">52 500</span>
                                         <span class="font-bold text-lg ml-1">€</span>
                                     </div>
                                 </div>
                                 
-                                <p class="text-xs text-gray-400 text-center">这笔钱，完全够您再开一家新店！</p>
+                                <p class="text-xs text-gray-400 text-center" data-i18n="calc_note">这笔钱，完全够您再开一家新店！</p>
                             </div>
                         </div>
                     </div>
 
-                    
                     <div class="bg-white rounded-[2rem] p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-section relative border border-gray-100 flex flex-col h-full overflow-hidden text-left">
                         <div class="absolute top-0 left-0 w-full h-1 bg-nexus-gold/60"></div>
                         
                         <div class="flex-grow">
                             <div class="flex items-center text-2xl font-bold text-gray-800 mb-3 mt-2">
-                                <span class="mr-3 text-3xl">💳</span> 专享采购白条
+                                <span class="mr-3 text-3xl">💳</span> <span data-i18n="ben_2_t1">专享采购白条</span>
                             </div>
-                            <div class="text-gray-500 text-sm mb-1">先货后款专属账期</div>
-                            <div class="text-nexus-gold font-display text-4xl lg:text-5xl font-bold mb-4">30-60 <span class="text-2xl lg:text-3xl">天</span></div>
+                            <div class="text-gray-500 text-sm mb-1" data-i18n="ben_2_t2">先货后款专属账期</div>
+                            <div class="text-nexus-gold font-display text-4xl lg:text-5xl font-bold mb-4">30-60 <span class="text-2xl lg:text-3xl" data-i18n="days">天</span></div>
                             
                             <div class="w-16 h-10 bg-gradient-to-br from-yellow-100 to-yellow-300 rounded-md border border-yellow-400/50 flex items-center justify-center shadow-sm mb-6 relative overflow-hidden">
                                 <div class="absolute top-2 left-2 w-3 h-2 bg-yellow-500/20 rounded-sm"></div>
@@ -452,62 +381,61 @@
                         
                         <div class="mt-auto bg-blue-50/80 rounded-2xl p-6 border border-blue-100 text-left w-full flex flex-col justify-center lg:h-[310px]">
                             <div class="my-auto">
-                                <p class="text-gray-800 font-bold text-sm mb-6 leading-relaxed">
+                                <p class="text-gray-800 font-bold text-sm mb-6 leading-relaxed" data-i18n="ben_2_desc">
                                     我们深知餐饮现金流就是生命，您不需要全款压货！
                                 </p>
                                 <ul class="space-y-4 text-sm text-gray-600">
                                     <li class="flex items-start">
                                         <span class="text-nexus-gold font-bold mr-2 text-base leading-none mt-0.5">✔</span>
-                                        <span>联合欧洲顶级金融机构提供背书</span>
+                                        <span data-i18n="ben_2_li1">联合欧洲顶级金融机构提供背书</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-nexus-gold font-bold mr-2 text-base leading-none mt-0.5">✔</span>
-                                        <span>专属“先货后款”采购白条</span>
+                                        <span data-i18n="ben_2_li2">专属“先货后款”采购白条</span>
                                     </li>
                                     <li class="flex items-start">
                                         <span class="text-nexus-gold font-bold mr-2 text-base leading-none mt-0.5">✔</span>
-                                        <span>信用优异店铺系统自动提额</span>
+                                        <span data-i18n="ben_2_li3">信用优异店铺系统自动提额</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    
                     <div class="bg-white rounded-[2rem] p-6 lg:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 fade-in-section relative border border-gray-100 flex flex-col h-full overflow-hidden text-left">
                         <div class="absolute top-0 left-0 w-full h-1 bg-nexus-navy"></div>
                         
                         <div class="flex-grow">
                             <div class="flex items-center text-2xl font-bold text-gray-800 mb-3 mt-2">
-                                <span class="mr-3 text-3xl">🛡️</span> 零风险售后
+                                <span class="mr-3 text-3xl">🛡️</span> <span data-i18n="ben_3_t1">零风险售后</span>
                             </div>
-                            <div class="text-gray-500 text-sm mb-1">极速定责理赔</div>
-                            <div class="text-nexus-navy font-display text-4xl lg:text-5xl font-bold mb-6">30 分钟</div>
+                            <div class="text-gray-500 text-sm mb-1" data-i18n="ben_3_t2">极速定责理赔</div>
+                            <div class="text-nexus-navy font-display text-4xl lg:text-5xl font-bold mb-6">30 <span class="text-2xl lg:text-3xl" data-i18n="mins">分钟</span></div>
                         </div>
                         
                         <div class="mt-auto bg-slate-50 rounded-2xl p-6 border border-slate-200 w-full flex flex-col justify-between lg:h-[310px]">
-                            <p class="text-gray-700 text-sm mb-2 leading-relaxed">
+                            <p class="text-gray-700 text-sm mb-2 leading-relaxed" data-i18n="ben_3_desc">
                                 买到坏货找批发商扯皮？在 Nexus，这绝对不会发生。
                             </p>
                             
                             <div class="flex justify-between items-center px-1 my-auto">
                                 <div class="text-center">
-                                    <div class="text-xs text-gray-500 mb-1.5">拍照上传</div>
+                                    <div class="text-xs text-gray-500 mb-1.5" data-i18n="ben_3_step1">拍照上传</div>
                                     <div class="text-2xl drop-shadow-sm">📸</div>
                                 </div>
                                 <div class="flex-1 border-t border-dashed border-gray-300 mx-1.5"></div>
                                 <div class="text-center">
-                                    <div class="text-xs text-gray-500 mb-1.5">专员核实</div>
+                                    <div class="text-xs text-gray-500 mb-1.5" data-i18n="ben_3_step2">专员核实</div>
                                     <div class="text-2xl drop-shadow-sm">🧑‍💻</div>
                                 </div>
                                 <div class="flex-1 border-t border-dashed border-gray-300 mx-1.5"></div>
                                 <div class="text-center">
-                                    <div class="text-xs font-bold text-nexus-navy mb-1.5">退款入账</div>
+                                    <div class="text-xs font-bold text-nexus-navy mb-1.5" data-i18n="ben_3_step3">退款入账</div>
                                     <div class="text-2xl drop-shadow-sm">💵</div>
                                 </div>
                             </div>
                             
-                            <div class="bg-gray-200/60 rounded-lg py-3 px-3 text-center text-xs text-gray-600 font-medium">
+                            <div class="bg-gray-200/60 rounded-lg py-3 px-3 text-center text-xs text-gray-600 font-medium" data-i18n="ben_3_note">
                                 平台垫付，由我们去打官司。您绝对不吃亏。
                             </div>
                         </div>
@@ -521,8 +449,8 @@
             <div class="absolute right-0 top-0 w-1/3 h-full bg-nexus-navy/5 rounded-l-[100px] -z-10"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-4xl font-bold text-nexus-navy mb-4">📱 免费打造“智慧化餐厅”</h2>
-                    <p class="text-xl text-gray-500 max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-nexus-navy mb-4"><span data-i18n="kit_title">📱 免费打造“智慧化餐厅”</span></h2>
+                    <p class="text-xl text-gray-500 max-w-3xl mx-auto" data-i18n="kit_sub">
                         本节演示我们为签约餐厅免费提供的软硬件赋能工具——Nexus Pad 智能后厨终端。请点击左侧菜单，体验我们如何通过数字化手段彻底解放您的后厨管理。
                     </p>
                 </div>
@@ -531,19 +459,19 @@
                     
                     <div class="w-full lg:w-1/3 space-y-4" id="nexus-tabs">
                         <button class="tab-btn w-full text-left bg-nexus-navy text-white px-6 py-5 rounded-2xl shadow-md transition-all flex items-center justify-between border-2 border-transparent" data-target="panel-voice">
-                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">🎙️</span> 傻瓜式语音报单</span>
+                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">🎙️</span> <span data-i18n="tab_1">傻瓜式语音报单</span></span>
                             <span class="text-xl">▶</span>
                         </button>
                         <button class="tab-btn w-full text-left bg-white text-gray-600 px-6 py-5 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition-all flex items-center justify-between border border-gray-200" data-target="panel-inventory">
-                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">📊</span> 智能库存预警</span>
+                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">📊</span> <span data-i18n="tab_2">智能库存预警</span></span>
                             <span class="text-xl text-gray-300">▶</span>
                         </button>
                         <button class="tab-btn w-full text-left bg-white text-gray-600 px-6 py-5 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition-all flex items-center justify-between border border-gray-200" data-target="panel-margin">
-                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">💶</span> 实时成本精算</span>
+                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">💶</span> <span data-i18n="tab_3">实时成本精算</span></span>
                             <span class="text-xl text-gray-300">▶</span>
                         </button>
                         <button class="tab-btn w-full text-left bg-white text-gray-600 px-6 py-5 rounded-2xl shadow-sm hover:shadow-md hover:bg-gray-50 transition-all flex items-center justify-between border border-gray-200" data-target="panel-sop">
-                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">👨‍🍳</span> 后厨 SOP 标准化</span>
+                            <span class="flex items-center text-lg font-bold"><span class="text-2xl mr-4">👨‍🍳</span> <span data-i18n="tab_4">后厨 SOP 标准化</span></span>
                             <span class="text-xl text-gray-300">▶</span>
                         </button>
                     </div>
@@ -551,113 +479,76 @@
                     
                     <div class="w-full lg:w-2/3">
                         <div class="nexus-pad-container bg-black rounded-[2rem] p-3 shadow-2xl relative border-b-8 border-gray-800">
-                            
                             <div class="absolute right-[-6px] top-20 w-1.5 h-16 bg-gray-800 rounded-l-none rounded-r-md"></div>
                             <div class="absolute right-[-6px] top-40 w-1.5 h-24 bg-gray-800 rounded-l-none rounded-r-md"></div>
                             
                             <div class="w-full h-full bg-slate-100 rounded-[1.5rem] overflow-hidden flex flex-col relative">
-                                
                                 <div class="bg-nexus-navy text-white px-4 py-2 flex justify-between items-center text-sm">
                                     <span>NexusOS 2.0</span>
                                     <span class="font-display" id="clock">14:05</span>
                                     <span>📶 100%</span>
                                 </div>
                                 
-                                
                                 <div class="flex-1 p-6 relative overflow-hidden bg-white">
                                     
                                     <div id="panel-voice" class="tab-panel absolute inset-0 p-8 transition-opacity duration-500 opacity-100 z-10 bg-slate-50">
                                         <div class="text-center mt-12">
-                                            <div class="w-24 h-24 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 animate-pulse">
-                                                🎙️
-                                            </div>
-                                            <h4 class="text-2xl font-bold text-gray-800 mb-4">正在聆听中...</h4>
+                                            <div class="w-24 h-24 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-4xl mx-auto mb-6 animate-pulse">🎙️</div>
+                                            <h4 class="text-2xl font-bold text-gray-800 mb-4" data-i18n="ui_1_h">正在聆听中...</h4>
                                             <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-200 inline-block text-left relative">
-                                                <div class="text-gray-500 text-sm mb-1">识别内容：</div>
-                                                <div class="text-lg font-medium text-gray-800">“老板，来五箱黑虎虾，两袋泰国香米。”</div>
+                                                <div class="text-gray-500 text-sm mb-1" data-i18n="ui_1_sub">识别内容：</div>
+                                                <div class="text-lg font-medium text-gray-800" data-i18n="ui_1_txt">“老板，来五箱黑虎虾，两袋泰国香米。”</div>
                                             </div>
                                             <div class="mt-8">
-                                                <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold">✓ 已自动生成采购单</span>
+                                                <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold" data-i18n="ui_1_ok">✓ 已自动生成采购单</span>
                                             </div>
-                                            <p class="mt-8 text-gray-500 max-w-sm mx-auto text-sm leading-relaxed">
-                                                抛弃油腻的手写单据。支持中文、法语等多语种智能语音识别，后厨人员一句话即可完成高精度系统落单。
-                                            </p>
                                         </div>
                                     </div>
 
-                                    
                                     <div id="panel-inventory" class="tab-panel absolute inset-0 p-8 transition-opacity duration-500 opacity-0 z-0 bg-slate-50">
-                                        <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center"><span class="mr-2">📊</span> 智能库存监控看板</h4>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center"><span class="mr-2">📊</span> <span data-i18n="ui_2_h">智能库存监控看板</span></h4>
                                         <div class="grid grid-cols-2 gap-4">
                                             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-red-500">
                                                 <div class="flex justify-between items-center mb-2">
-                                                    <span class="font-bold">特级黑虎虾 (20-30)</span>
-                                                    <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-bold">⚠️ 库存告警</span>
+                                                    <span class="font-bold" data-i18n="ui_2_i1">特级黑虎虾</span>
+                                                    <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-bold" data-i18n="ui_2_w">⚠️告警</span>
                                                 </div>
-                                                <div class="text-3xl font-display text-red-500 mb-1">1.5 <span class="text-sm text-gray-500">箱</span></div>
+                                                <div class="text-3xl font-display text-red-500 mb-1">1.5 <span class="text-sm" data-i18n="box">箱</span></div>
                                                 <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2"><div class="bg-red-500 h-1.5 rounded-full" style="width: 15%"></div></div>
-                                                <p class="text-xs text-gray-500 mt-2">预计今晚售罄，建议立即补货。</p>
-                                                <button class="mt-3 w-full bg-nexus-navy text-white py-1 rounded text-sm hover:bg-blue-800">一键补货</button>
                                             </div>
                                             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
                                                 <div class="flex justify-between items-center mb-2">
-                                                    <span class="font-bold">泰国茉莉香米</span>
-                                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-bold">充足</span>
+                                                    <span class="font-bold" data-i18n="ui_2_i2">泰国茉莉香米</span>
+                                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-bold" data-i18n="ui_2_s">充足</span>
                                                 </div>
-                                                <div class="text-3xl font-display text-green-600 mb-1">12 <span class="text-sm text-gray-500">袋</span></div>
+                                                <div class="text-3xl font-display text-green-600 mb-1">12 <span class="text-sm" data-i18n="bag">袋</span></div>
                                                 <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2"><div class="bg-green-500 h-1.5 rounded-full" style="width: 80%"></div></div>
-                                                <p class="text-xs text-gray-500 mt-2">安全库存，按目前消耗可使用7天。</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    
                                     <div id="panel-margin" class="tab-panel absolute inset-0 p-8 transition-opacity duration-500 opacity-0 z-0 bg-slate-50">
                                         <div class="flex justify-between items-center mb-6">
-                                            <h4 class="text-xl font-bold text-gray-800">💶 单品毛利精算仪</h4>
-                                            <select class="border rounded px-2 py-1 text-sm bg-white"><option>招牌香辣虾</option><option>冬阴功汤</option></select>
+                                            <h4 class="text-xl font-bold text-gray-800" data-i18n="ui_3_h">💶 单品毛利精算</h4>
+                                            <select class="border rounded px-2 py-1 text-sm"><option data-i18n="ui_3_dish">招牌香辣虾</option></select>
                                         </div>
                                         <div class="bg-white rounded-xl shadow-sm p-5 border border-gray-200">
-                                            <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-100">
-                                                <div>
-                                                    <div class="text-sm text-gray-500">菜单售价</div>
-                                                    <div class="text-2xl font-display font-bold text-gray-800">€ 28.50</div>
-                                                </div>
-                                                <div class="text-right">
-                                                    <div class="text-sm text-gray-500">当前净利 (占比)</div>
-                                                    <div class="text-2xl font-display font-bold text-nexus-green">€ 18.24 (64%)</div>
-                                                </div>
+                                            <div class="flex justify-between items-center pb-4 border-b">
+                                                <div><div class="text-sm text-gray-500" data-i18n="ui_3_price">售价</div><div class="text-2xl font-bold">€ 28.50</div></div>
+                                                <div class="text-right"><div class="text-sm text-gray-500" data-i18n="ui_3_profit">净利</div><div class="text-2xl font-bold text-nexus-green">€ 18.24 (64%)</div></div>
                                             </div>
-                                            <h5 class="text-sm font-bold text-gray-700 mb-3">实时BOM成本拆解</h5>
-                                            <ul class="space-y-2 text-sm">
-                                                <li class="flex justify-between"><span class="text-gray-600">黑虎虾 (300g)</span><span class="font-display">€ 6.20 <span class="text-green-500 text-xs">↓15%</span></span></li>
-                                                <li class="flex justify-between"><span class="text-gray-600">秘制酱料 (50g)</span><span class="font-display">€ 1.50</span></li>
-                                                <li class="flex justify-between"><span class="text-gray-600">配菜及消耗</span><span class="font-display">€ 0.80</span></li>
-                                                <li class="flex justify-between"><span class="text-gray-600">水电煤分摊摊销</span><span class="font-display">€ 1.76</span></li>
-                                                <li class="flex justify-between font-bold pt-2 border-t mt-2"><span class="text-gray-800">总动态成本</span><span class="font-display text-nexus-red">€ 10.26</span></li>
-                                            </ul>
                                         </div>
                                     </div>
 
-                                    
                                     <div id="panel-sop" class="tab-panel absolute inset-0 p-8 transition-opacity duration-500 opacity-0 z-0 bg-slate-50">
-                                        <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center"><span class="mr-2">👨‍🍳</span> 电子化 SOP 操作指导</h4>
-                                        <div class="bg-white rounded-xl shadow-sm overflow-hidden flex border border-gray-200 h-[280px]">
-                                            <div class="w-1/3 bg-gray-100 flex items-center justify-center text-4xl border-r border-gray-200">
-                                                🍲
-                                            </div>
-                                            <div class="w-2/3 p-5 overflow-y-auto">
-                                                <h5 class="font-bold text-lg mb-1">冬阴功汤 - 标准化流程</h5>
-                                                <p class="text-xs text-gray-500 mb-4">更新日期：2023-10-15 | 难度：⭐⭐</p>
-                                                <ol class="space-y-3 text-sm text-gray-700 list-decimal list-inside">
-                                                    <li><span class="font-medium text-gray-900">备料：</span>取标准大虾4只，草菇50g切半，香茅2根拍碎。</li>
-                                                    <li><span class="font-medium text-gray-900">熬汤底：</span>加入 Nexus 定制高汤包 1 袋，入沸水 500ml。</li>
-                                                    <li><span class="font-medium text-gray-900">调味下锅：</span>加入香茅、柠檬叶中火煮 3 分钟，放入大虾及草菇。</li>
-                                                    <li><span class="font-medium text-gray-900">出锅定标：</span>虾身变红卷曲后（约 2 分钟），加入椰奶 30ml 搅拌均匀即刻出锅。</li>
-                                                </ol>
+                                        <h4 class="text-xl font-bold text-gray-800 mb-6 flex items-center"><span class="mr-2">👨‍🍳</span> <span data-i18n="ui_4_h">电子化 SOP 指导</span></h4>
+                                        <div class="bg-white rounded-xl shadow-sm overflow-hidden flex border border-gray-200 h-[200px]">
+                                            <div class="w-1/3 bg-gray-100 flex items-center justify-center text-4xl border-r">🍲</div>
+                                            <div class="w-2/3 p-5 overflow-y-auto text-sm text-gray-700 list-decimal list-inside">
+                                                <p data-i18n="ui_4_1">1. 备料：取标准大虾4只...</p>
+                                                <p data-i18n="ui_4_2">2. 熬汤底：加入高汤包1袋...</p>
                                             </div>
                                         </div>
-                                        <p class="text-center text-sm text-gray-500 mt-4">铁打的电子配方，流水的厨师。降低人员流失带来的口味波动风险。</p>
                                     </div>
                                     
                                 </div>
@@ -672,8 +563,8 @@
             <div class="absolute inset-0 opacity-10 bg-[url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9YDARQyJw+s3UwAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAJklEQVQY02P8//8/A27AxIAXxqBQCzIM6gUZAx8UBtDkUQb+gQwAAMpOBwG2/7UjAAAAAElFTkSuQmCC')] repeat"></div>
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-16 fade-in-section">
-                    <h2 class="text-4xl font-bold text-white mb-4">🔒 货源与品质的钢铁长城</h2>
-                    <p class="text-xl text-nexus-silver max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-bold text-white mb-4"><span data-i18n="gua_title">🔒 货源与品质的钢铁长城</span></h2>
+                    <p class="text-xl text-nexus-silver max-w-3xl mx-auto" data-i18n="gua_sub">
                         本节为您解构 Nexus 供应链后端的安全基石。在跨国直采模式下，我们如何通过物理仓储、国际认证和金融担保机制，彻底消除您的顾虑。
                     </p>
                 </div>
@@ -681,22 +572,22 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/20 rounded-3xl overflow-hidden bg-white/5 backdrop-blur-sm fade-in-section">
                     <div class="p-10 text-center border-b md:border-b-0 md:border-r border-white/20 hover:bg-white/10 transition duration-300">
                         <div class="w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-5xl mb-6 shadow-inner">⚡</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">次日极速送达</h3>
-                        <p class="text-nexus-silver leading-relaxed">
+                        <h3 class="text-2xl font-bold text-white mb-4" data-i18n="gua_1_t">次日极速送达</h3>
+                        <p class="text-nexus-silver leading-relaxed" data-i18n="gua_1_d">
                             海外直采不再意味着漫长等待。核心大厂货物已提前配置在<strong class="text-nexus-gold">欧洲本地大型现代化冷库</strong>中，今日下单，明日即可下锅。
                         </p>
                     </div>
                     <div class="p-10 text-center border-b md:border-b-0 md:border-r border-white/20 hover:bg-white/10 transition duration-300">
                         <div class="w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-5xl mb-6 shadow-inner">🏆</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">国际权威品控</h3>
-                        <p class="text-nexus-silver leading-relaxed">
+                        <h3 class="text-2xl font-bold text-white mb-4" data-i18n="gua_2_t">国际权威品控</h3>
+                        <p class="text-nexus-silver leading-relaxed" data-i18n="gua_2_d">
                             所有入驻供应商必须强制通过 <strong class="text-nexus-gold">SGS / TÜV</strong> 等国际第三方权威机构的严苛验厂与高频抽检。对食品安全残次品采取零容忍态度。
                         </p>
                     </div>
                     <div class="p-10 text-center hover:bg-white/10 transition duration-300">
                         <div class="w-24 h-24 mx-auto rounded-full bg-white/10 flex items-center justify-center text-5xl mb-6 shadow-inner">🏦</div>
-                        <h3 class="text-2xl font-bold text-white mb-4">资金绝对安全</h3>
-                        <p class="text-nexus-silver leading-relaxed">
+                        <h3 class="text-2xl font-bold text-white mb-4" data-i18n="gua_3_t">资金绝对安全</h3>
+                        <p class="text-nexus-silver leading-relaxed" data-i18n="gua_3_d">
                             交易引入<strong class="text-nexus-gold">第三方银行机构担保机制</strong>。只有当您的后厨签收核验无误，并在系统点击确认后，工厂端才能解冻货款。
                         </p>
                     </div>
@@ -707,48 +598,47 @@
         <section id="cta" class="py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-gradient-to-br from-gray-900 to-black rounded-[2rem] p-8 md:p-12 shadow-2xl relative overflow-hidden fade-in-section border border-gray-800">
-                    
                     <div class="absolute top-0 right-0 w-64 h-64 bg-nexus-gold/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
                     
                     <div class="text-center relative z-10">
-                        <div class="inline-block bg-nexus-gold text-nexus-navy font-bold px-6 py-2 rounded-full mb-6 text-sm tracking-widest uppercase animate-pulse">
+                        <div class="inline-block bg-nexus-gold text-nexus-navy font-bold px-6 py-2 rounded-full mb-6 text-sm tracking-widest uppercase animate-pulse" data-i18n="cta_tag">
                             🎁 零定金 · 无强制约束 · 抢占席位
                         </div>
                         
                         <h2 class="text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-nexus-gold to-yellow-200 mb-4">
-                            🎟️ 仅限首批 1000 名！<br/>“创始联合体”定向邀约
+                            <span data-i18n="cta_title_1">🎟️ 仅限首批 1000 名！</span><br/>
+                            <span data-i18n="cta_title_2">“创始联合体”定向邀约</span>
                         </h2>
                         
-                        <p class="text-lg text-gray-300 mb-10">
+                        <p class="text-lg text-gray-300 mb-10" data-i18n="cta_sub">
                             此致在法餐饮同仁：本节是专属限时邀约。今天签下 LOI（意向书），即可立刻锁定系统内最高级别的终身VIP特权。让我们用规模重塑行业规则。
                         </p>
 
-                        
                         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
                             <div class="bg-white/10 rounded-xl p-4 text-center border border-white/5 backdrop-blur">
                                 <div class="text-3xl mb-2">👑</div>
-                                <div class="font-bold text-white mb-1">终身全免</div>
-                                <div class="text-xs text-gray-400">软硬件费用永久豁免</div>
+                                <div class="font-bold text-white mb-1" data-i18n="cta_b1">终身全免</div>
+                                <div class="text-xs text-gray-400" data-i18n="cta_b1_d">软硬件费用永久豁免</div>
                             </div>
                             <div class="bg-white/10 rounded-xl p-4 text-center border border-white/5 backdrop-blur">
                                 <div class="text-3xl mb-2">🥇</div>
-                                <div class="font-bold text-white mb-1">优先授信</div>
-                                <div class="text-xs text-gray-400">独享最高额度采购白条</div>
+                                <div class="font-bold text-white mb-1" data-i18n="cta_b2">优先授信</div>
+                                <div class="text-xs text-gray-400" data-i18n="cta_b2_d">独享最高额度采购白条</div>
                             </div>
                             <div class="bg-white/10 rounded-xl p-4 text-center border border-white/5 backdrop-blur">
                                 <div class="text-3xl mb-2">🤝</div>
-                                <div class="font-bold text-white mb-1">专属管家</div>
-                                <div class="text-xs text-gray-400">1V1 母语客服秒级响应</div>
+                                <div class="font-bold text-white mb-1" data-i18n="cta_b3">专属管家</div>
+                                <div class="text-xs text-gray-400" data-i18n="cta_b3_d">1V1 母语客服秒级响应</div>
                             </div>
                         </div>
 
                         <div class="text-center">
-                            <p class="text-xl font-bold text-white mb-6">现在，让我们一起，把属于您的利润拿回来！</p>
+                            <p class="text-xl font-bold text-white mb-6" data-i18n="cta_call">现在，让我们一起，把属于您的利润拿回来！</p>
                             <button class="bg-gradient-to-r from-nexus-gold to-yellow-500 text-gray-900 font-bold text-xl px-12 py-5 rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(242,153,74,0.4)] flex items-center justify-center mx-auto group">
-                                锁定创始名额
+                                <span data-i18n="cta_btn">锁定创始名额</span>
                                 <span class="ml-2 group-hover:translate-x-2 transition-transform">👉</span>
                             </button>
-                            <p class="text-gray-500 text-sm mt-4">点击填写基础信息，您的专属业务顾问将于 2 小时内与您联系。</p>
+                            <p class="text-gray-500 text-sm mt-4" data-i18n="cta_foot">点击填写基础信息，您的专属业务顾问将于 2 小时内与您联系。</p>
                         </div>
                     </div>
                 </div>
@@ -759,36 +649,162 @@
     <footer class="bg-nexus-dark text-gray-400 py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="text-2xl font-bold text-white tracking-wider mb-4">NEXUS<span class="text-nexus-gold">DINING</span></div>
-            <p class="mb-6">告别中间商剥削，重塑欧洲亚裔餐饮供应链。</p>
-            <p class="text-sm">© 2026 Nexus Dining. All rights reserved. | 商业保密材料，请勿外传。</p>
+            <p class="mb-6" data-i18n="footer_1">告别中间商剥削，重塑欧洲亚裔餐饮供应链。</p>
+            <p class="text-sm" data-i18n="footer_2">© 2026 Nexus Dining. All rights reserved. | 商业保密材料，请勿外传。</p>
         </div>
     </footer>
 
     <script>
+        // ================= Translations Dictionary =================
+        const translations = {
+            zh: {
+                nav_1: '痛点解析', nav_2: '直采模式', nav_3: '核心收益', nav_4: '智慧后厨', nav_btn: '锁定名额',
+                hero_tag: '全法亚裔餐饮“破局与共赢”计划', hero_title_1: '告别中间商剥削', hero_title_2: '把利润抢回自己的收银台',
+                hero_sub: 'Nexus Dining：重构全法亚裔餐饮供应链。万店联合，源头直采。我们承诺：降本、增效、保现金流。',
+                hero_k1_sub: '核心目标', hero_k1: '重构全法供应链', hero_k2_sub: '创新模式', hero_k2: '万店联合源头直采', hero_k3_sub: '我们的承诺', hero_k3: '降本·增效·保现金流',
+                pain_title: '🛑 您的利润，到底去哪了？', pain_sub: '本节为您揭示过去两年压在每一位在法餐饮老板头上的“三座大山”。通过量化数据模型，直观展示传统供应链中层层剥削的严峻现状。',
+                pain_chart_title: '传统供应链利润流失瀑布图', pain_conclusion_1: '结论：超过 ', pain_conclusion_2: ' 的利润，被中间商白白吃掉！',
+                pain_1_title: '通胀飙升的极限挤压', pain_1_desc: '房租、人工双双暴涨，但受制于市场消费力，菜单价格却面临无法突破的天花板，利润空间被极限压缩。',
+                pain_2_title: '核心食材成本暴增', pain_2_desc_1: '黑虎虾、大米、食用油等后厨生命线食材，进货价格涨幅已全面突破 ',
+                pain_3_title: '服务质量极其低下', pain_3_desc: '长期垄断导致服务傲慢。错单、漏单无人问津，坏货退换扯皮不断，餐饮老板既出高价还要受气。',
+                model_title: '🤝 我们不是批发商，我们是您的“采购合伙人”', model_sub: '本节阐述 Nexus Dining 独创的“联合集采”商业模式。我们将对比传统冗长的供应链结构，揭示去中心化、端到端直采如何创造结构性的成本优势。',
+                model_h3: '我们不赚差价，<br/>只做两件事：', model_f1: '聚沙成塔', model_f1_desc: '汇聚全法顶尖餐厅的零散订单，形成面对上游工厂的绝对议价筹码。', model_f2: '包厂直采', model_f2_desc: '越过所有欧洲本地中间商，直接对接全球源头优质大厂。',
+                model_trad_title: '传统模式 (低效/高成本)', node_1: '源头工厂', node_2: '出口商', node_3: '进口商', node_4: '大批发商', node_5: '小批发商', node_6: '您的餐厅',
+                model_nex_title: 'Nexus 模式 (直达/底价)', node_1_b: '源头工厂', node_6_b: '您的后厨', model_nex_btn: 'Nexus 物流直达', model_nex_desc: '没有进口商，没有地区经销商。货品从源头工厂，直接送达您的后厨。',
+                ben_title: '💎 合作的三大绝对收益', ben_sub: '本节为您量化展示加入 Nexus 生态后获得的真金白银特权。我们将从成本缩减、资金流转和风险规避三个核心经营维度进行详细解读。',
+                ben_tag: '核心', ben_1_t1: '砍掉差价', ben_1_t2: '进货成本直降', ben_1_desc: '依托万店联合采购量，我们能拿到毫无水分的“出厂底价”。承诺核心大单品，您的拿货价将比市面主流批发商便宜极多。',
+                calc_title: '实时收益精算器', calc_unit: '年采购额 (€)', calc_res_t: '一年可直接省下纯利润', calc_note: '这笔钱，完全够您再开一家新店！',
+                ben_2_t1: '专享采购白条', ben_2_t2: '先货后款专属账期', days: '天', ben_2_desc: '我们深知餐饮现金流就是生命，您不需要全款压货！', ben_2_li1: '联合欧洲顶级金融机构提供背书', ben_2_li2: '专属“先货后款”采购白条', ben_2_li3: '信用优异店铺系统自动提额',
+                ben_3_t1: '零风险售后', ben_3_t2: '极速定责理赔', mins: '分钟', ben_3_desc: '买到坏货找批发商扯皮？在 Nexus，这绝对不会发生。', ben_3_step1: '拍照上传', ben_3_step2: '专员核实', ben_3_step3: '退款入账', ben_3_note: '平台垫付，由我们去打官司。您绝对不吃亏。',
+                kit_title: '📱 免费打造“智慧化餐厅”', kit_sub: '本节演示我们为签约餐厅免费提供的软硬件赋能工具——Nexus Pad 智能后厨终端。请点击左侧菜单，体验我们如何通过数字化手段彻底解放您的后厨管理。',
+                tab_1: '傻瓜式语音报单', tab_2: '智能库存预警', tab_3: '实时成本精算', tab_4: '后厨 SOP 标准化',
+                ui_1_h: '正在聆听中...', ui_1_sub: '识别内容：', ui_1_txt: '“老板，来五箱黑虎虾，两袋泰国香米。”', ui_1_ok: '✓ 已自动生成采购单',
+                ui_2_h: '智能库存监控看板', ui_2_i1: '特级黑虎虾', ui_2_w: '⚠️告警', box: '箱', ui_2_i2: '泰国茉莉香米', ui_2_s: '充足', bag: '袋',
+                ui_3_h: '💶 单品毛利精算', ui_3_dish: '招牌香辣虾', ui_3_price: '售价', ui_3_profit: '净利',
+                ui_4_h: '电子化 SOP 指导', ui_4_1: '1. 备料：取标准大虾4只...', ui_4_2: '2. 熬汤底：加入高汤包1袋...',
+                gua_title: '🔒 货源与品质的钢铁长城', gua_sub: '本节为您解构 Nexus 供应链后端的安全基石。在跨国直采模式下，我们如何通过物理仓储、国际认证和金融担保机制，彻底消除您的顾虑。',
+                gua_1_t: '次日极速送达', gua_1_d: '海外直采不再意味着漫长等待。核心大厂货物已提前配置在<strong class="text-nexus-gold">欧洲本地大型现代化冷库</strong>中，今日下单，明日即可下锅。',
+                gua_2_t: '国际权威品控', gua_2_d: '所有入驻供应商必须强制通过 <strong class="text-nexus-gold">SGS / TÜV</strong> 等国际第三方权威机构的严苛验厂与高频抽检。对食品安全残次品采取零容忍态度。',
+                gua_3_t: '资金绝对安全', gua_3_d: '交易引入<strong class="text-nexus-gold">第三方银行机构担保机制</strong>。只有当您的后厨签收核验无误，并在系统点击确认后，工厂端才能解冻货款。',
+                cta_tag: '🎁 零定金 · 无强制约束 · 抢占席位', cta_title_1: '🎟️ 仅限首批 1000 名！', cta_title_2: '“创始联合体”定向邀约', cta_sub: '此致在法餐饮同仁：本节是专属限时邀约。今天签下 LOI（意向书），即可立刻锁定系统内最高级别的终身VIP特权。让我们用规模重塑行业规则。',
+                cta_b1: '终身全免', cta_b1_d: '软硬件费用永久豁免', cta_b2: '优先授信', cta_b2_d: '独享最高额度采购白条', cta_b3: '专属管家', cta_b3_d: '1V1 母语客服秒级响应',
+                cta_call: '现在，让我们一起，把属于您的利润拿回来！', cta_btn: '锁定创始名额', cta_foot: '点击填写基础信息，您的专属业务顾问将于 2 小时内与您联系。',
+                footer_1: '告别中间商剥削，重塑欧洲亚裔餐饮供应链。', footer_2: '© 2026 Nexus Dining. All rights reserved. | 商业保密材料，请勿外传。',
+                chart_labels: ['原始出厂利润', '出口隐性加价', '欧洲进口商利润', '大批发商利润', '餐厅最终所获'],
+                chart_tooltip_b: '基准利润空间: 100%', chart_tooltip_f: '餐厅最终所获: 60%', chart_tooltip_loss: '环节扣减损耗: '
+            },
+            en: {
+                nav_1: 'Pain Points', nav_2: 'Direct Sourcing', nav_3: 'Key Benefits', nav_4: 'Smart Kitchen', nav_btn: 'Join Now',
+                hero_tag: 'French Asian Dining Breakthrough & Win-Win Plan', hero_title_1: 'End Middleman Exploitation', hero_title_2: 'Reclaim Profits for Your Register',
+                hero_sub: 'Nexus Dining: Rebuilding the French-Asian supply chain. Joint procurement, direct sourcing. We promise: cost reduction, efficiency, and cash flow.',
+                hero_k1_sub: 'Core Goal', hero_k1: 'Rebuild Supply Chain', hero_k2_sub: 'Innovation', hero_k2: 'Joint Direct Sourcing', hero_k3_sub: 'Our Promise', hero_k3: 'Lower Cost & Boost Cash',
+                pain_title: '🛑 Where Did Your Profits Go?', pain_sub: 'This section reveals the "three mountains" crushing restaurant owners in France. Our quantitative model shows the severe reality of margin erosion in traditional supply chains.',
+                pain_chart_title: 'Traditional Supply Chain Profit Waterfall', pain_conclusion_1: 'Conclusion: Over ', pain_conclusion_2: ' of profits are eaten by middlemen!',
+                pain_1_title: 'Extreme Inflation Squeeze', pain_1_desc: 'Rent and labor costs are soaring, but menu prices face a ceiling due to consumer purchasing power, squeezing profit margins to the limit.',
+                pain_2_title: 'Surging Ingredient Costs', pain_2_desc_1: 'Lifeline ingredients like tiger prawns, rice, and oil have seen price hikes exceeding ',
+                pain_3_title: 'Abysmal Service Quality', pain_3_desc: 'Monopolies breed arrogance. Wrong or missed orders are ignored, returns are a hassle, and owners pay high prices for bad attitudes.',
+                model_title: '🤝 Not Wholesalers, We Are Your "Procurement Partners"', model_sub: 'Detailing Nexus Dining\'s unique "Joint Procurement" model. Contrasting complex structures with decentralized direct sourcing to create structural cost advantages.',
+                model_h3: 'Zero markups,<br/>we only do two things:', model_f1: 'Collective Power', model_f1_desc: 'Aggregating orders from top restaurants across France to secure absolute bargaining power with upstream factories.', model_f2: 'Direct Sourcing', model_f2_desc: 'Bypassing all local European middlemen to connect directly with premium global source factories.',
+                model_trad_title: 'Traditional Model (Inefficient/Costly)', node_1: 'Factory', node_2: 'Exporter', node_3: 'Importer', node_4: 'Wholesaler', node_5: 'Distributor', node_6: 'Your Restaurant',
+                model_nex_title: 'Nexus Model (Direct/Bottom Price)', node_1_b: 'Factory', node_6_b: 'Your Kitchen', model_nex_btn: 'Nexus Direct Logistics', model_nex_desc: 'No importers. No regional distributors. Goods travel directly from the source factory to your kitchen.',
+                ben_title: '💎 Three Absolute Collaborative Benefits', ben_sub: 'Quantifying the tangible privileges of joining the Nexus ecosystem across cost reduction, cash flow, and risk aversion.',
+                ben_tag: 'CORE', ben_1_t1: 'Cut Margins', ben_1_t2: 'Direct Cost Reduction', ben_1_desc: 'Leveraging our 10,000+ restaurant volume, we secure pure "factory floor prices." Your core items will be significantly cheaper than mainstream wholesalers.',
+                calc_title: 'Real-time Profit Calculator', calc_unit: 'Annual Volume (€)', calc_res_t: 'Extra Annual Net Profit', calc_note: 'Enough to open a brand new branch!',
+                ben_2_t1: 'Exclusive Credit', ben_2_t2: 'Buy Now, Pay Later', days: 'Days', ben_2_desc: 'Cash flow is the lifeblood of dining. You don\'t need to prepay for stock!', ben_2_li1: 'Backed by top European financial institutions', ben_2_li2: 'Exclusive "Buy Now, Pay Later" credit line', ben_2_li3: 'Auto-increase for excellent credit records',
+                ben_3_t1: 'Zero-Risk Claims', ben_3_t2: 'Express Liability Settlement', mins: 'Mins', ben_3_desc: 'Arguing over bad stock? At Nexus, this never happens.', ben_3_step1: 'Upload Photo', ben_3_step2: 'Agent Verify', ben_3_step3: 'Refund Issued', ben_3_note: 'Platform pays first, we handle the dispute. You never lose.',
+                kit_title: '📱 Free "Smart Kitchen" Upgrade', kit_sub: 'Demonstrating our free hardware/software tool for signed partners—the Nexus Pad. Click the menu to experience true kitchen liberation.',
+                tab_1: 'Voice Ordering', tab_2: 'Smart Inventory', tab_3: 'Real-time Margins', tab_4: 'Kitchen SOPs',
+                ui_1_h: 'Listening...', ui_1_sub: 'Recognized Text:', ui_1_txt: '"Boss, 5 boxes of tiger prawns, 2 bags of jasmine rice."', ui_1_ok: '✓ Purchase Order Auto-generated',
+                ui_2_h: 'Smart Inventory Dashboard', ui_2_i1: 'Premium Tiger Prawns', ui_2_w: '⚠️ Alert', box: 'Boxes', ui_2_i2: 'Thai Jasmine Rice', ui_2_s: 'Optimal', bag: 'Bags',
+                ui_3_h: '💶 Item Margin Calculator', ui_3_dish: 'Signature Spicy Prawns', ui_3_price: 'Price', ui_3_profit: 'Net Profit',
+                ui_4_h: 'Digital SOP Guidance', ui_4_1: '1. Prep: 4 standard prawns...', ui_4_2: '2. Broth: Add 1 pack of stock...',
+                gua_title: '🔒 The Iron Wall of Quality & Supply', gua_sub: 'Deconstructing our backend security. How we eliminate your worries through physical warehousing, international certifications, and financial guarantees.',
+                gua_1_t: 'Next-Day Delivery', gua_1_d: 'Overseas sourcing no longer means long waits. Core items are pre-stocked in <strong class="text-nexus-gold">large local European cold storages</strong>. Order today, cook tomorrow.',
+                gua_2_t: 'Global QC Standards', gua_2_d: 'All suppliers must pass strict factory audits and high-frequency inspections by <strong class="text-nexus-gold">SGS / TÜV</strong>. Zero tolerance for defective goods.',
+                gua_3_t: 'Absolute Fund Security', gua_3_d: 'Transactions secured by <strong class="text-nexus-gold">3rd-party banking institutions</strong>. Factories are only paid after your kitchen confirms receipt and quality.',
+                cta_tag: '🎁 Zero Deposit · No Obligation · Secure Your Spot', cta_title_1: '🎟️ Limited to First 1000!', cta_title_2: '"Founding Consortium" Invite', cta_sub: 'To our peers in France: This is an exclusive time-limited offer. Sign the LOI today to lock in lifetime top-tier VIP privileges. Let\'s reshape the rules with scale.',
+                cta_b1: 'Lifetime Free', cta_b1_d: 'Zero software/hardware fees forever', cta_b2: 'Priority Credit', cta_b2_d: 'Exclusive max-limit credit lines', cta_b3: 'Local Concierge', cta_b3_d: '1-on-1 native support, instant response',
+                cta_call: 'Now, let\'s take back the profits that belong to you!', cta_btn: 'Lock Founding Status', cta_foot: 'Fill out basic info, and your advisor will contact you within 2 hours.',
+                footer_1: 'End middleman exploitation, reshape the Euro-Asian dining supply chain.', footer_2: '© 2026 Nexus Dining. All rights reserved. | Confidential business material.',
+                chart_labels: ['Factory Margin', 'Export Markup', 'Importer Margin', 'Wholesaler Margin', 'Your Profit'],
+                chart_tooltip_b: 'Base Margin: 100%', chart_tooltip_f: 'Final Restaurant Profit: 60%', chart_tooltip_loss: 'Margin Loss: '
+            },
+            fr: {
+                nav_1: 'Points Faibles', nav_2: 'Modèle Direct', nav_3: 'Avantages', nav_4: 'Cuisine Smart', nav_btn: 'Rejoindre',
+                hero_tag: 'Plan "Percée et Gagnant-Gagnant" pour la Restauration Asiatique', hero_title_1: 'Fini l\'Exploitation', hero_title_2: 'Récupérez Vos Marges',
+                hero_sub: 'Nexus Dining : Refonte de la chaîne d\'approvisionnement asiatique en France. Achats groupés, sourcing direct. Promesse : baisse des coûts, efficacité et trésorerie.',
+                hero_k1_sub: 'Objectif Central', hero_k1: 'Refonte de la Chaîne', hero_k2_sub: 'Innovation', hero_k2: 'Sourcing Direct Groupé', hero_k3_sub: 'Notre Promesse', hero_k3: 'Baisse Coûts & Trésorerie',
+                pain_title: '🛑 Où Sont Passés Vos Profits ?', pain_sub: 'Cette section révèle les "trois montagnes" écrasant les restaurateurs en France. Notre modèle montre la réalité de l\'érosion des marges dans les chaînes traditionnelles.',
+                pain_chart_title: 'Cascade de Perte de Profit (Traditionnel)', pain_conclusion_1: 'Conclusion : Plus de ', pain_conclusion_2: ' de profits sont dévorés par les intermédiaires !',
+                pain_1_title: 'Pression de l\'Inflation', pain_1_desc: 'Loyers et salaires flambent, mais les prix des menus font face à un plafond de pouvoir d\'achat, écrasant les marges.',
+                pain_2_title: 'Coûts des Ingrédients', pain_2_desc_1: 'Les prix des ingrédients vitaux (crevettes tigrées, riz, huile) ont subi des hausses dépassant ',
+                pain_3_title: 'Qualité de Service Abyssale', pain_3_desc: 'Les monopoles engendrent l\'arrogance. Erreurs ignorées, retours compliqués, et les patrons paient le prix fort pour une mauvaise attitude.',
+                model_title: '🤝 Pas des Grossistes, Vos "Partenaires d\'Achat"', model_sub: 'Détail du modèle "Achat Groupé" de Nexus Dining. Contraste entre la complexité traditionnelle et le sourcing direct décentralisé pour créer un avantage structurel.',
+                model_h3: 'Zéro marge cachée,<br/>nous faisons 2 choses :', model_f1: 'Force Collective', model_f1_desc: 'Regroupement des commandes des meilleurs restaurants de France pour un pouvoir de négociation absolu avec les usines.', model_f2: 'Sourcing Direct', model_f2_desc: 'Contournement de tous les intermédiaires locaux pour se connecter directement aux usines mondiales.',
+                model_trad_title: 'Modèle Traditionnel (Inefficace/Coûteux)', node_1: 'Usine', node_2: 'Exportateur', node_3: 'Importateur', node_4: 'Grossiste', node_5: 'Distributeur', node_6: 'Votre Restaurant',
+                model_nex_title: 'Modèle Nexus (Direct/Prix Bas)', node_1_b: 'Usine', node_6_b: 'Votre Cuisine', model_nex_btn: 'Logistique Directe Nexus', model_nex_desc: 'Pas d\'importateurs. Pas de distributeurs. Les marchandises vont de l\'usine à votre cuisine.',
+                ben_title: '💎 Trois Avantages Collaboratifs Absolus', ben_sub: 'Quantification des privilèges de l\'écosystème Nexus : réduction des coûts, fluidité de trésorerie et aversion au risque.',
+                ben_tag: 'CORE', ben_1_t1: 'Coupe des Marges', ben_1_t2: 'Baisse Directe des Coûts', ben_1_desc: 'Grâce à notre volume (10 000+ restaurants), nous obtenons les "prix sortie d\'usine". Vos produits clés seront bien moins chers.',
+                calc_title: 'Calculateur de Profit en Temps Réel', calc_unit: 'Volume Annuel (€)', calc_res_t: 'Profit Net Supplémentaire Annuel', calc_note: 'Assez pour ouvrir un nouveau restaurant !',
+                ben_2_t1: 'Crédit Exclusif', ben_2_t2: 'Achetez, Payez Plus Tard', days: 'Jours', ben_2_desc: 'La trésorerie est vitale. Pas besoin d\'avancer les fonds pour vos stocks !', ben_2_li1: 'Soutenu par les meilleures banques européennes', ben_2_li2: 'Ligne de crédit exclusive "Achetez, Payez Plus Tard"', ben_2_li3: 'Augmentation auto. pour excellent dossier',
+                ben_3_t1: 'Réclamations Zéro Risque', ben_3_t2: 'Règlement Express', mins: 'Min', ben_3_desc: 'Fini les litiges avec les grossistes. Chez Nexus, cela n\'arrive jamais.', ben_3_step1: 'Photo', ben_3_step2: 'Vérification', ben_3_step3: 'Remboursé', ben_3_note: 'La plateforme paie d\'abord, nous gérons le litige. Vous ne perdez rien.',
+                kit_title: '📱 Cuisine Intelligente Gratuite', kit_sub: 'Démonstration de notre outil gratuit (matériel/logiciel) pour les partenaires — le Nexus Pad. Libérez votre gestion de cuisine.',
+                tab_1: 'Commande Vocale', tab_2: 'Stock Intelligent', tab_3: 'Marges en Temps Réel', tab_4: 'SOP de Cuisine',
+                ui_1_h: 'Écoute en cours...', ui_1_sub: 'Texte reconnu :', ui_1_txt: '"Chef, 5 cartons de crevettes tigrées, 2 sacs de riz jasmin."', ui_1_ok: '✓ Bon de commande auto-généré',
+                ui_2_h: 'Tableau de Bord Stock', ui_2_i1: 'Crevettes Tigrées Premium', ui_2_w: '⚠️ Alerte', box: 'Cartons', ui_2_i2: 'Riz Jasmin Thaï', ui_2_s: 'Optimal', bag: 'Sacs',
+                ui_3_h: '💶 Calculateur de Marge', ui_3_dish: 'Crevettes Épicées Signature', ui_3_price: 'Prix', ui_3_profit: 'Profit Net',
+                ui_4_h: 'Guidage Numérique SOP', ui_4_1: '1. Prép : 4 crevettes...', ui_4_2: '2. Bouillon : 1 sachet de fond...',
+                gua_title: '🔒 Le Mur de Fer de la Qualité', gua_sub: 'Déconstruction de notre sécurité back-end. Comment nous éliminons vos soucis grâce au stockage physique, certifications et garanties.',
+                gua_1_t: 'Livraison le Lendemain', gua_1_d: 'Le sourcing étranger ne signifie plus d\'attente. Stocks pré-positionnés dans de <strong class="text-nexus-gold">grands entrepôts frigorifiques européens</strong>.',
+                gua_2_t: 'Normes Mondiales QC', gua_2_d: 'Tous les fournisseurs passent des audits stricts (<strong class="text-nexus-gold">SGS / TÜV</strong>). Tolérance zéro pour les défauts.',
+                gua_3_t: 'Sécurité Absolue des Fonds', gua_3_d: 'Transactions sécurisées par <strong class="text-nexus-gold">des banques tierces</strong>. Les usines sont payées après validation de votre cuisine.',
+                cta_tag: '🎁 Zéro Dépôt · Sans Engagement · Réservez Votre Place', cta_title_1: '🎟️ Limité aux 1000 Premiers !', cta_title_2: 'Invitation "Consortium Fondateur"', cta_sub: 'À nos pairs en France : Offre exclusive limitée dans le temps. Signez la LOI aujourd\'hui pour bloquer vos privilèges VIP à vie.',
+                cta_b1: 'Gratuit à Vie', cta_b1_d: 'Zéro frais logiciel/matériel à jamais', cta_b2: 'Crédit Prioritaire', cta_b2_d: 'Lignes de crédit plafond exclusives', cta_b3: 'Conciergerie', cta_b3_d: 'Support natif 1v1, réponse instantanée',
+                cta_call: 'Maintenant, récupérons les profits qui vous appartiennent !', cta_btn: 'Bloquer le Statut Fondateur', cta_foot: 'Remplissez les infos, votre conseiller vous contactera sous 2h.',
+                footer_1: 'Finissons l\'exploitation, refaçonnons la chaîne d\'approvisionnement.', footer_2: '© 2026 Nexus Dining. Tous droits réservés. | Confidentiel.',
+                chart_labels: ['Marge Usine', 'Marge Export', 'Marge Importateur', 'Marge Grossiste', 'Votre Profit'],
+                chart_tooltip_b: 'Marge de base : 100%', chart_tooltip_f: 'Profit final restaurant : 60%', chart_tooltip_loss: 'Perte de Marge : '
+            }
+        };
+
+        let currentLang = 'zh';
+
+        function setLang(lang) {
+            currentLang = lang;
+            
+            // 切换语言按钮高亮样式
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.className = 'lang-btn text-nexus-silver hover:text-white text-sm px-2.5 py-1 transition cursor-pointer';
+            });
+            document.getElementById(`btn-${lang}`).className = 'lang-btn text-white font-bold text-sm bg-white/10 px-2.5 py-1 rounded-md cursor-default';
+
+            // 更新所有文本
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key]; 
+                }
+            });
+
+            // 更新 Chart.js 图表
+            if (window.waterfallChart) {
+                window.waterfallChart.data.labels = translations[lang]['chart_labels'];
+                window.waterfallChart.update();
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
 
+            // Waterfall Chart logic
             const ctx = document.getElementById('profitWaterfallChart').getContext('2d');
-            
-            const waterfallChart = new Chart(ctx, {
+            window.waterfallChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['原始出厂利润空间', '出口环节隐性加价', '欧洲进口商层级利润', '本地大批发商利润', '餐厅最终剩余利润'],
+                    labels: translations['zh']['chart_labels'],
                     datasets: [{
-                        label: '利润流向 (%)',
-                        data: [
-                            [0, 100], 
-                            [85, 100], 
-                            [75, 85], 
-                            [60, 75], 
-                            [0, 60]    
-                        ],
-                        backgroundColor: [
-                            '#0F9D58', 
-                            '#D93025', 
-                            '#D93025', 
-                            '#D93025', 
-                            '#F2994A'  
-                        ],
+                        label: 'Profit',
+                        data: [[0, 100], [85, 100], [75, 85], [60, 75], [0, 60]],
+                        backgroundColor: ['#0F9D58', '#D93025', '#D93025', '#D93025', '#F2994A'],
                         borderColor: '#ffffff',
                         borderWidth: 2,
                         borderRadius: 4
@@ -804,46 +820,26 @@
                                 label: function(context) {
                                     let v = context.raw;
                                     let diff = v[1] - v[0];
-                                    if (context.dataIndex === 0) return '基准利润空间: 100%';
-                                    if (context.dataIndex === 4) return '餐厅最终所获: 60%';
-                                    return '环节扣减损耗: ' + diff + '%';
+                                    let langDict = translations[currentLang];
+                                    if (context.dataIndex === 0) return langDict['chart_tooltip_b'];
+                                    if (context.dataIndex === 4) return langDict['chart_tooltip_f'];
+                                    return langDict['chart_tooltip_loss'] + diff + '%';
                                 }
                             },
-                            backgroundColor: '#0A2540',
-                            titleFont: { size: 14, family: 'sans-serif' },
-                            bodyFont: { size: 14, family: 'sans-serif' },
-                            padding: 12
+                            backgroundColor: '#0A2540', titleFont: { size: 14, family: 'sans-serif' }, bodyFont: { size: 14, family: 'sans-serif' }, padding: 12
                         }
                     },
                     scales: {
-                        y: {
-                            min: 0,
-                            max: 100,
-                            grid: { color: '#f1f5f9' },
-                            ticks: {
-                                callback: function(value) { return value + '%'; },
-                                font: { family: 'DIN Alternate, Montserrat, sans-serif' }
-                            }
-                        },
-                        x: {
-                            grid: { display: false },
-                            ticks: {
-                                font: { size: 12 },
-                                maxRotation: 45,
-                                minRotation: 45
-                            }
-                        }
+                        y: { min: 0, max: 100, grid: { color: '#f1f5f9' }, ticks: { callback: function(value) { return value + '%'; }, font: { family: 'DIN Alternate, Montserrat, sans-serif' } } },
+                        x: { grid: { display: false }, ticks: { font: { size: 12 }, maxRotation: 45, minRotation: 45 } }
                     },
-                    animation: {
-                        duration: 2000,
-                        easing: 'easeOutQuart'
-                    }
+                    animation: { duration: 2000, easing: 'easeOutQuart' }
                 }
             });
 
+            // Tabs Logic
             const tabs = document.querySelectorAll('.tab-btn');
             const panels = document.querySelectorAll('.tab-panel');
-
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     tabs.forEach(t => {
@@ -851,75 +847,49 @@
                         t.classList.add('bg-white', 'text-gray-600', 'border-gray-200');
                         t.querySelector('span:last-child').classList.replace('text-white', 'text-gray-300');
                     });
-                    
                     tab.classList.remove('bg-white', 'text-gray-600', 'border-gray-200');
                     tab.classList.add('bg-nexus-navy', 'text-white', 'border-transparent');
                     tab.querySelector('span:last-child').classList.replace('text-gray-300', 'text-white');
 
                     const targetId = tab.getAttribute('data-target');
                     panels.forEach(panel => {
-                        if (panel.id === targetId) {
-                            panel.classList.remove('opacity-0', 'z-0');
-                            panel.classList.add('opacity-100', 'z-10');
-                        } else {
-                            panel.classList.remove('opacity-100', 'z-10');
-                            panel.classList.add('opacity-0', 'z-0');
-                        }
+                        if (panel.id === targetId) { panel.classList.remove('opacity-0', 'z-0'); panel.classList.add('opacity-100', 'z-10'); } 
+                        else { panel.classList.remove('opacity-100', 'z-10'); panel.classList.add('opacity-0', 'z-0'); }
                     });
                 });
             });
 
+            // Clock
             function updateClock() {
                 const now = new Date();
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                document.getElementById('clock').textContent = `${hours}:${minutes}`;
+                document.getElementById('clock').textContent = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
             }
-            setInterval(updateClock, 60000);
-            updateClock();
+            setInterval(updateClock, 60000); updateClock();
 
+            // Real-time Profit Calculator Slider
             const calcSlider = document.getElementById('calc-slider');
             const calcVolume = document.getElementById('calc-volume');
             const calcResult = document.getElementById('calc-result');
-
             if (calcSlider) {
                 calcSlider.addEventListener('input', function() {
-                    const val = parseInt(this.value);
-                    const volume = val * 10000;
-                    // 取 15%-20% 的中位数 17.5% 作为估算比例
-                    const profit = volume * 0.175; 
-                    
-                    // 动态更新格式化的数字 (以空格千位分隔)
+                    const val = parseInt(this.value); const volume = val * 10000; const profit = volume * 0.175; 
                     calcVolume.textContent = volume.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " €";
                     calcResult.textContent = profit.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
                 });
             }
 
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
+            // Intersection Observer
+            const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
+                    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); obs.unobserve(entry.target); }
                 });
-            }, observerOptions);
+            }, { root: null, rootMargin: '0px', threshold: 0.15 });
+            document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
 
-            document.querySelectorAll('.fade-in-section').forEach(section => {
-                observer.observe(section);
-            });
-
+            // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
                 });
             });
         });
